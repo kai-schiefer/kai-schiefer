@@ -1,0 +1,204 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	box-sizing: border-box;
+}
+
+body {
+  font-family: BahnSchrift;
+  font-size: 1.2rem;
+  line-height: 1.45;
+  display: flex;
+  flex-wrap: wrap;
+}
+ /* =====================  Typography  =============================*/
+
+h1{
+	font-weight: 600;
+	font-size: 2.5rem;
+}
+
+span{
+	font-weight: 400;
+	font-size: 1.4rem;
+}
+
+
+ /* =====================  Main Content Area  =============================*/
+
+.main-content {
+  padding: 5%;
+  flex: 1 1 80%;
+  min-height: 100vh;
+
+}
+
+
+/* Portfolio*/
+
+.portfolio {
+ 	display: grid;
+  	height: 100%;
+	grid-template-rows: repeat(5, 1fr);
+	grid-template-columns: repeat(5, 1fr);
+  	grid-gap: 1em;
+}
+
+.portfolio-item {
+	background: white;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5em;
+	background-size: cover;
+	background-position: top left;
+	transition: all ease-in-out 300ms;
+	position: relative;
+	z-index: 10;
+
+}
+
+  .portfolio-item.medium {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+  
+  .portfolio-item.large {
+    grid-row: span 5;
+    grid-column: span 3;
+  }
+  
+  .portfolio-item.tall {
+    grid-row: span 3;
+   	grid-column: span 2;
+  }
+
+.name{
+	background-image: url("../../images/kai.png");
+	background-position: bottom right 1em;
+	background-repeat: no-repeat;
+	background-size: 5em;
+}  
+
+
+.logo{
+	background-image: url("../../images/dropshadow_k.png");
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.links{
+	text-align: right;
+	display: block;
+}
+
+
+nav li{
+	display:block;
+	padding: 0.35em 1em;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+nav a{
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	font-weight: 100;
+	font-stretch: condensed;
+	color: #D8D8D8;
+}
+
+@media (min-width: 30em) and (max-width: 40em){
+	.name{
+		background-size: 3em;
+	}
+	nav a{
+		font-size: 1rem;
+	}
+}
+@media (max-width: 30em){
+	.name{
+		background-size: 2em;	
+	}
+	nav a{
+		font-size: 1rem;
+	}
+}
+
+.active{
+	font-weight: 400;
+	font-stretch: expanded;
+	color: black;
+}
+
+.inactive:hover, .inactive:focus{
+	color: #CCCCCC;
+}
+
+/* =====================  About Me  =============================*/
+
+
+
+.home-about-textbox{
+	text-align: center;
+	background-color:#E2E2E2;
+	padding: 3em;
+	width: 100vw;
+	margin-left: -1.25%;
+	outline: 2px solid #79A1C0;;
+	outline-offset: -2.5em;
+	position: relative;
+	color: #FFFFFF;
+
+}
+
+.home-about-textbox h1{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: -0.3em;
+	background: #E2E2E2;
+	padding: 0 0.25em;
+	color: #79A1C0;
+}
+
+
+@media (min-width: 60em){
+	
+	.home-about-textbox{
+		text-align: left;
+		width: 40%;
+		margin-left: -1.25%;
+		top: -7em;
+		right: -30em;
+		
+	}
+	.home-about-textbox h1{
+		top: -0.17em;
+		padding: 0 0.25em;
+		font-size: 1.8em;
+		
+	}
+	
+	.container{
+		width: 95%;
+		margin: 0 auto;
+		max-width: 70em;
+		background-image: url("../../images/kai.jpg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		padding: 5em;
+	}
+
+}
+
+

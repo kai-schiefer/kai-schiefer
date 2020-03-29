@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	box-sizing: border-box;
+}
+
+body {
+  font-family: BahnSchrift;
+  font-size: 1.2rem;
+  line-height: 1.45;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-grid{
+	display: grid;
+  	width: 100%;
+	grid-template-rows: repeat(8, 1fr);
+	grid-template-columns: repeat(10, 1fr);
+  	grid-gap: 1em;
+	background-color: gray;
+	padding: 1em;
+}
+
+.item{
+	background-color: orange;
+	text-align: center;
+	align-content: center;
+}
+
+.item.med{
+	grid-row: span 2;
+	grid-column: span 2;
+	background-image: url("images/dropshadow_k.png");
+	background-size: 10em;
+	background-position: relative;
+	
+	
+}
+
+.item.large{
+	grid-row: span 3;
+	grid-column: span 3;
+}
